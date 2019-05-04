@@ -4,6 +4,8 @@
         <title>M.A.R.S</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="main.js"></script>
+        <script src="emoji.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
             ::-webkit-scrollbar{
@@ -186,7 +188,6 @@
                 }
             }
         </style>
-        <script src="main.js"></script>
     </head>
     <body>
         <div class="main">
@@ -206,6 +207,10 @@
                     <a id="vacation">🌴</a>
                 </div>
 
+                <div class="emoji-sort" id="done">
+                    <a>✅</a>
+                </div>
+
                 <div class="emoji-sort" id="delete">
                     <a>💀</a>
                 </div>
@@ -216,16 +221,14 @@
                             <input type="checkbox" class="done">
                         </div>
                         <div class="content">
-                            <input class="rem-content" type="text" placeholder="Untitled">
-                            <input class="rem-content" type="text" placeholder="Untitled">
+                            <input class="rem-content" type="text" placeholder="Event Title" name="event-title" id="title">
+                            <input class="rem-content" type="text" placeholder="Event Description" name="event-description" id="description">
                             <br>
-                            <input class="rem-content" type="date">
+                            <input class="rem-content" type="date" name="event-date" id="date">
                         </div>
                     </div>
                     <div class="edit" id="add">🚀</div>
                 </div>
-
-                <div data-role="element" class="todo-item-wrap ui-draggable ui-draggable-handle" style="opacity: 1; position: relative;"><div class="todo-item-added"><div class="actions"><input type="checkbox" class="done"></div><div class="content"><input class="rem-content" type="text" placeholder="Untitled"><input class="rem-content" type="text" placeholder="Untitled"><br><input class="rem-content" type="date"></div></div><div class="edit">📎</div></div>
 
                 <!--NEW TEMPLATE TODO ITEM TEMPLATE-->
                 <!--
