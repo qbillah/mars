@@ -1,3 +1,3 @@
-function readEvent(){
-    
+function readEvent(keyword){
+    console.log(keyword);
 }

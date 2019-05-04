@@ -11,13 +11,6 @@ $(document).ready(function(){
         var actions = document.createElement("div");
         actions.className = "actions";
 
-        /**CHANGE THIS WITH THE EMOJI ALGORITHM */
-        /**CHANGE ELEMENT TO A SPAN - NO CHECKBOXES */
-        var checked = document.createElement("input");
-        $(checked).attr("type" , "checkbox");
-        checked.className = "done";
-         /**CHANGE THIS WITH THE EMOJI ALGORITHM */
-
         var content = document.createElement("div");
         content.className = "content";
 
@@ -26,6 +19,15 @@ $(document).ready(function(){
         $(title).css("color" , "black");
         $(title).attr("type" , "text");
         $(title).val(a);
+        
+        readEvent(a);
+
+        /**CHANGE THIS WITH THE EMOJI ALGORITHM */
+        /**CHANGE ELEMENT TO A SPAN - NO CHECKBOXES */
+        var checked = document.createElement("input");
+        $(checked).attr("type" , "checkbox");
+        checked.className = "done";
+         /**CHANGE THIS WITH THE EMOJI ALGORITHM */
 
         var br = document.createElement("br");
 
