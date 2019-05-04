@@ -1,5 +1,7 @@
 $(document).ready(function(){
+
     $('.todo-item-wrap').draggable({ revert: true });
+
     $("#add").click(function(){
 
         var todoItem = document.createElement("div");
@@ -59,7 +61,9 @@ $(document).ready(function(){
     $('#delete').droppable({
         drop: function( event, ui ) {
             ui.draggable.slideUp();
-            //Change this animation
+            console.log(
+                $(ui.draggable).attr('class')
+            );
         }
     });
 
