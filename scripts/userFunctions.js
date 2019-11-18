@@ -28,7 +28,7 @@ $(document).ready(function(){
 
                 Email.send({
                     //SecureToken : "5f2e68c9-3035-4a48-a31b-ef8eeb82fd24",
-                    Host : "smtp.yourisp.com",
+                    Host : "smtp.gmail.com",
                     Username : "marsreminder@gmail.com",
                     Password : "Quazi890123",
                     To : 'yasinbillahdesigns@gmail.com',
