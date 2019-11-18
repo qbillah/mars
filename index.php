@@ -2,6 +2,7 @@
 <?php 
 
     session_start();
+    require('./verify/dbConn.php');
     //$_SESSION['userID'] = "qbillah";
 ?>
 <html>
@@ -98,7 +99,6 @@
                 </div>
 
                 <?php 
-                    echo "*";
 
                     if(isset($_SESSION['uuID'])){
                         $user = $_SESSION['uuID'];
@@ -107,8 +107,7 @@
                     }else{
                         
                     }
-                    echo $user;
-                    require '../verify/dbConn.php';
+                    
                     $sql = "SELECT * FROM $user";
                     $results = $conn->query($sql);
                     echo $results->num_rows;
