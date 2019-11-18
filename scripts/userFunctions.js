@@ -93,7 +93,7 @@ $(document).ready(function(){
     });
     
     $("#IMP").click(function(){
-        window.location.href = "https://mars-remind.herokuapp.com/search?tag=WRK";
+        window.location.href = "https://mars-remind.herokuapp.com/search?tag=IMP";
     });
 
     $("#EML").click(function(){

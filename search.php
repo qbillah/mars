@@ -150,7 +150,7 @@
                         }
                     }else{
                         echo "<br>";
-                        echo "No events found 😔.";
+                        echo "<span style='margin-left: auto; margin-right: auto; text-align: center;'>No events found 😔.</span>";
                     }
 
                 ?>
