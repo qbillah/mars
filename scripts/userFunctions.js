@@ -9,15 +9,17 @@ $(document).ready(function(){
         $("#date").datepicker();
 
         var read = ("#title").val();
-        
+
         var data = readEvent(read);
 
         if(read.includes("::") == true){
             var eventTitle = data[0];
             var eventTag = data[1];
+            console.log(true);
         }else if(read.includes("::") == false){
             var eventTitle = $("#title").val();
             var eventTag = '';
+            console.log(false);
         }
 
         console.log(eventTitle);
