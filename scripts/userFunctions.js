@@ -28,7 +28,7 @@ $(document).ready(function(){
 
                 Email.send({
                     SecureToken : "5f2e68c9-3035-4a48-a31b-ef8eeb82fd24",
-                    To : 'them@website.com',
+                    To : 'yasinbillahdesigns@gmail.com',
                     From : "marsreminder@gmail.com",
                     Subject : "This is the subject",
                     Body : "And this is the body"
