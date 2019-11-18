@@ -87,7 +87,6 @@ $(document).ready(function(){
     $('.done').click(function(){
         var deleteKey = $(this).attr('id');
         $.post("https://mars-remind.herokuapp.com/verify/deleteEvent" , {deleteID : deleteKey}).done(function(data){
-            alert(data);
             window.location.href = "https://mars-remind.herokuapp.com/";
         });
     });
