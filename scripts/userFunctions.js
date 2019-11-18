@@ -72,7 +72,7 @@ $(document).ready(function(){
                 $("#title").val("");
                 $("#description").val("");
                 document.getElementById("date").value = "";
-                window.location.href = "https://mars-remind.herokuapp.com/";
+                //window.location.href = "https://mars-remind.herokuapp.com/";
         });
     });
 
