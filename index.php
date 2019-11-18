@@ -98,27 +98,20 @@
                 </div>
 
                 <?php 
+                    echo "*";
                     
                     if(isset($_SESSION['uuID'])){
                         $user = $_SESSION['uuID'];
-
-                        require '../verify/dbConn.php';
-                        $sql = "SELECT * FROM $user";
-                        $results = $conn->query($sql);
-                        echo $results->num_rows;
-
                     }else if(isset($_COOKIE['uuID'])){
                         $user = $_COOKIE["uuID"];
-
-                        require '../verify/dbConn.php';
-                        $sql = "SELECT * FROM $user";
-                        $results = $conn->query($sql);
-                        echo $results->num_rows;
-
-
                     }else{
                         
                     }
+
+                    require '../verify/dbConn.php';
+                    $sql = "SELECT * FROM $user";
+                    $results = $conn->query($sql);
+                    echo $results->num_rows;
 
                 ?>
 
