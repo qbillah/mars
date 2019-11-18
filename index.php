@@ -36,16 +36,15 @@
             
         <div class="main">
             <div class="header">
-                <div class="rounded-wrap" style="position: absolute; left: 4.5em;">About</div>
-                <div class="rounded-wrap">🚀 M.A.R.S 🚀</div>
-                <div class="rounded-wrap" style="position: absolute; right: 4.5em;" id="
+
+                <div class="rounded-wrap" style="position: absolute; left: 4.5em;" id="
                     <?php 
                         if(isset($_SESSION['userID'])){
-                            
+                            echo "";
                         }else if(isset($_COOKIE['userID'])){
-                            
+                            echo "";
                         }else{
-                            echo "#login";
+                            echo "#about";
                         }
                     ?>
                 ">
@@ -55,7 +54,30 @@
                         }else if(isset($_COOKIE['userID'])){
                             echo $_COOKIE['userID'];
                         }else{
+                            echo "About";
+                        }
+                    ?>
+                </div>
+
+                <div class="rounded-wrap">🚀 M.A.R.S 🚀</div>
+                <div class="rounded-wrap" style="position: absolute; right: 4.5em;" id="
+                    <?php 
+                        if(isset($_SESSION['userID'])){
+                            echo "#logout";
+                        }else if(isset($_COOKIE['userID'])){
+                            echo "#logout";
+                        }else{
                             echo "#login";
+                        }
+                    ?>
+                ">
+                    <?php 
+                        if(isset($_SESSION['userID'])){
+                            echo "Logout";
+                        }else if(isset($_COOKIE['userID'])){
+                            echo "Logout";
+                        }else{
+                            echo "Login";
                         }
                     ?>
                 </div>

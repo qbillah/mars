@@ -89,6 +89,10 @@ $(document).ready(function(){
         $(".login-modal").slideDown().css('display' , 'inline-flex');
     });
 
+    $("#logout").click(function(){
+        window.location.href = "https://mars-remind.herokuapp.com/verify/logout";
+    });
+
     $('#delete').droppable({
         //delete element
         accept: ".todo-item-wrap",
