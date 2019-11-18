@@ -50,7 +50,7 @@ $(document).ready(function(){
                 console.log(getCookieEmail());
                 console.log(getCookieUser());
                 console.log(icon);
-                console.log(date);
+                console.log(eventDate);
 
                 var template_params = {
                     "to_email": getCookieEmail(),
@@ -62,7 +62,12 @@ $(document).ready(function(){
                 
                 var service_id = "default_service";
                 var template_id = "marsremind";
-                emailjs.send(service_id, template_id, template_params);
+                emailjs.send(service_id, template_id, template_params)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
 
                 $("#title").val("");
                 $("#description").val("");
