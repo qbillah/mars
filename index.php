@@ -97,6 +97,25 @@
                     <div class="edit" id="add">🚀</div>
                 </div>
 
+                <?php 
+                    
+                    if(isset($_SESSION['uuID'])){
+                        $user = $_SESSION['uuID'];
+                    }else if(isset($_COOKIE['uuID'])){
+                        $user = $_COOKIE["uuID"];
+                    }else{
+                        
+                    }
+
+                    if(isset($user)){
+                        require('../verify/dbConn.php');
+                        $sql = "SELECT * FROM $user";
+                        $results = $conn->query($sql);
+                        echo $results->num_rows;
+                    }
+
+                ?>
+
                 <!--NEW TEMPLATE TODO ITEM TEMPLATE-->
                 <!--
                 <div class="todo-item-wrap">
