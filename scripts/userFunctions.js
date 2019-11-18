@@ -27,10 +27,7 @@ $(document).ready(function(){
             .done(function( data ) {
 
                 Email.send({
-                    //SecureToken : "5f2e68c9-3035-4a48-a31b-ef8eeb82fd24",
-                    Host : "smtp.gmail.com",
-                    Username : "marsreminder@gmail.com",
-                    Password : "Quazi890123",
+                    SecureToken : "377666a6-fbb4-4db3-bef2-c447d13b0333",
                     To : 'yasinbillahdesigns@gmail.com',
                     From : "marsreminder@gmail.com",
                     Subject : "This is the subject",
