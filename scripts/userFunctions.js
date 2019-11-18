@@ -16,7 +16,7 @@ $(document).ready(function(){
             var eventTag = data[1];
         }else{
             var eventTitle = $("#title").val();
-            var eventTag = ''
+            var eventTag = '';
         }
 
         console.log(eventTitle);
