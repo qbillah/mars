@@ -25,6 +25,7 @@
                 echo "<script src='../scripts/userFunctions.js'></script>";
             }
         ?>
+        <script src="../scripts/emoji.js"></script>
     </head>
     <body>
 
