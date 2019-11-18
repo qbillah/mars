@@ -99,7 +99,7 @@
 
                 <?php 
                     echo "*";
-                    
+
                     if(isset($_SESSION['uuID'])){
                         $user = $_SESSION['uuID'];
                     }else if(isset($_COOKIE['uuID'])){
@@ -107,7 +107,7 @@
                     }else{
                         
                     }
-
+                    echo $user;
                     require '../verify/dbConn.php';
                     $sql = "SELECT * FROM $user";
                     $results = $conn->query($sql);
