@@ -8,7 +8,7 @@ $(document).ready(function(){
         
         $("#date").datepicker();
 
-        var read = ("#title").val();
+        var read = $("#title").val();
 
         var data = readEvent(read);
 
@@ -17,7 +17,7 @@ $(document).ready(function(){
             var eventTag = data[1];
             console.log(true);
         }else if(read.includes("::") == false){
-            var eventTitle = $("#title").val();
+            var eventTitle = read;
             var eventTag = '';
             console.log(false);
         }
