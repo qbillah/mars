@@ -8,7 +8,7 @@ function readEvent(title){
         var flag = title.split("::");
         arrData.push(flag[0]);
         arrData.push(flag[1]);
-        return data;
+        return arrData;
     }else if(title.includes("::") == false){
         data = title;
         return data;
