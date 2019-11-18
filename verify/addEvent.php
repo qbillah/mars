@@ -2,8 +2,6 @@
 
     session_start();
 
-    require './vendor/autoload.php';
-
     $redurl = "https://mars-remind.herokuapp.com/?error=100";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
