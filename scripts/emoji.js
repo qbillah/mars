@@ -2,7 +2,7 @@ function readEvent(title){
     
     var data;
 
-    if(title.includes("::")){
+    if(title.includes("::") == true){
         var flag = title.split("::");
         data = flag;
         return data;
