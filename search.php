@@ -100,7 +100,7 @@
                         
                     }
                     
-                    $sql = "SELECT * FROM $user ORDER BY eventDate DESC WHERE eventTag = $findTag";
+                    $sql = "SELECT * FROM $user WHERE eventTag = $findTag ORDER BY eventDate DESC ";
                     $results = $conn->query($sql);
                     $events = $results->num_rows;
 
