@@ -95,9 +95,7 @@
                 <?php 
 
                     $findTag = $_GET["tag"];
-
-                    echo $findTag;
-
+                        
                     if(isset($_SESSION['uuID'])){
                         $user = $_SESSION['uuID'];
                     }else if(isset($_COOKIE['uuID'])){
@@ -106,7 +104,7 @@
                         
                     }
                     
-                    $sql = "SELECT * FROM $user WHERE eventTag = $findTag ORDER BY eventDate DESC ";
+                    $sql = "SELECT * FROM $user WHERE eventTag = '$findTag' ORDER BY eventDate DESC ";
                     $results = $conn->query($sql);
                     $events = $results->num_rows;
 
