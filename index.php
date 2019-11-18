@@ -120,8 +120,8 @@
                     echo"</div>";
 
                     echo"<div class='content'>";
-                    echo"<input class='rem-content' type='text' placeholder='".$events['event']."' readonly>";
-                    echo"<input class='rem-content' type='text' placeholder='".$events['eventDescription']."' readonly>";
+                    echo"<input class='rem-content' type='text' value='".$events['event']."' readonly>";
+                    echo"<input class='rem-content' type='text' value='".$events['eventDescription']."' readonly>";
                     echo"<br>";
                     echo"<input class='rem-content' type='date' value='".$events['eventDate']."' readonly>";
                     echo"</div>";
