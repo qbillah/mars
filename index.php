@@ -101,17 +101,23 @@
                     
                     if(isset($_SESSION['uuID'])){
                         $user = $_SESSION['uuID'];
-                    }else if(isset($_COOKIE['uuID'])){
-                        $user = $_COOKIE["uuID"];
-                    }else{
-                        
-                    }
 
-                    if(isset($user)){
                         require('../verify/dbConn.php');
                         $sql = "SELECT * FROM $user";
                         $results = $conn->query($sql);
                         echo $results->num_rows;
+
+                    }else if(isset($_COOKIE['uuID'])){
+                        $user = $_COOKIE["uuID"];
+
+                        require('../verify/dbConn.php');
+                        $sql = "SELECT * FROM $user";
+                        $results = $conn->query($sql);
+                        echo $results->num_rows;
+
+
+                    }else{
+                        
                     }
 
                 ?>
