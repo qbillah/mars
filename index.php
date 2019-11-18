@@ -108,7 +108,7 @@
                         
                     }
                     
-                    $sql = "SELECT * FROM $user ORDER BY eventDate ASC";
+                    $sql = "SELECT * FROM $user ORDER BY eventDate DESC";
                     $results = $conn->query($sql);
                     $events = $results->num_rows;
 
