@@ -112,23 +112,27 @@
                     $results = $conn->query($sql);
                     $events = $results->num_rows;
 
-                    echo"<div class='todo-item-wrap' style='opacity: 1;'>";
-                    echo"<div class='todo-item-added'>";
+                    if($events > 0){
+                        while($event = $events->fetch_assoc()){
+                            echo"<div class='todo-item-wrap' style='opacity: 1;'>";
+                            echo"<div class='todo-item-added'>";
 
-                    echo"<div class='actions'>";
-                    echo"<input type='checkbox' class='done' id='".$events['id']."'>";
-                    echo"</div>";
+                            echo"<div class='actions'>";
+                            echo"<input type='checkbox' class='done' id='".$event['id']."'>";
+                            echo"</div>";
 
-                    echo"<div class='content'>";
-                    echo"<input class='rem-content' type='text' value='".$events['event']."' readonly>";
-                    echo"<input class='rem-content' type='text' value='".$events['eventDescription']."' readonly>";
-                    echo"<br>";
-                    echo"<input class='rem-content' type='date' value='".$events['eventDate']."' readonly>";
-                    echo"</div>";
+                            echo"<div class='content'>";
+                            echo"<input class='rem-content' type='text' value='".$event['event']."' readonly>";
+                            echo"<input class='rem-content' type='text' value='".$event['eventDescription']."' readonly>";
+                            echo"<br>";
+                            echo"<input class='rem-content' type='date' value='".$event['eventDate']."' readonly>";
+                            echo"</div>";
 
-                    echo"</div>";
-                    echo"<div class='edit'>🚀</div>";
-                    echo"</div>";
+                            echo"</div>";
+                            echo"<div class='edit'>🚀</div>";
+                            echo"</div>";
+                        }
+                    }
 
                 ?>
 
