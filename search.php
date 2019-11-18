@@ -148,6 +148,9 @@
                             echo"<div class='edit'>".$tag."</div>";
                             echo"</div>";
                         }
+                    }else{
+                        echo "<br>";
+                        echo "No events found 😔.";
                     }
 
                 ?>
