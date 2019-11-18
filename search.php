@@ -3,8 +3,12 @@
 
     session_start();
     require('./verify/dbConn.php');
-    if(!isset($_SESSION['userID']) || !isset($_COOKIE['userID'])){
-        header("Location: https://mars-remind.herokuapp.com/");
+    if(!isset($_SESSION['userID'])){
+
+        if(!isset($_COOKIE['userID'])){
+            header("Location: https://mars-remind.herokuapp.com/");
+        }
+        
     }
 ?>
 <html>
@@ -147,32 +151,6 @@
                     }
 
                 ?>
-
-                <!--NEW TEMPLATE TODO ITEM TEMPLATE-->
-                <!--
-                <div class="todo-item-wrap">
-                    <div class="todo-item">
-                        <div class="actions">
-                            <input type="checkbox" class="done">
-                        </div>
-                        <div class="content">
-                            <input type="text" placeholder="Reminder Title" class="rem-content">
-                            <br>
-                            <input type="text" placeholder="Reminder Description" class="rem-content">
-                            <br>
-                            <input type="date" class="rem-content">
-                        </div>
-                    </div>
-                    <div class="edit">
-                        ⚫
-                    </div>
-                </div>
-                -->
-                <!--NEW TEMPLATE TODO ITEM TEMPLATE-->
-
-                <!--
-                    Pull from DB here *****************
-                -->
 
             </div>
         </div>
