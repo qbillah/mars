@@ -108,9 +108,27 @@
                         
                     }
                     
-                    $sql = "SELECT * FROM $user";
+                    $sql = "SELECT * FROM $user ORDER BY eventDate ASC";
                     $results = $conn->query($sql);
-                    echo $results->num_rows;
+                    $events = $results->num_rows;
+
+                    echo"<div class='todo-item-wrap' style='opacity: 1;'>";
+                    echo"<div class='todo-item-added'>";
+
+                    echo"<div class='actions'>";
+                    echo"<input type='checkbox' class='done' id='".$events['id']."'>";
+                    echo"</div>";
+
+                    echo"<div class='content'>";
+                    echo"<input class='rem-content' type='text' placeholder='".$events['event']."' readonly>";
+                    echo"<input class='rem-content' type='text' placeholder='".$events['eventDescription']."' readonly>";
+                    echo"<br>";
+                    echo"<input class='rem-content' type='date' value='".$events['eventDate']."' readonly>";
+                    echo"</div>";
+
+                    echo"</div>";
+                    echo"<div class='edit'>🚀</div>";
+                    echo"</div>";
 
                 ?>
 
