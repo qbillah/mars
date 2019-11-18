@@ -19,11 +19,12 @@
         <script src="jquery.ui.touch-punch.min.js"></script>
         <?php 
             if(!isset($_SESSION['userID']) && !isset($_COOKIE['userID'])){
+                echo "<script src='../scripts/routing.js'></script>";
                 echo "<script src='../scripts/main.js'></script>";
+            }else if(isset($_SESSION['userID']) || isset($_COOKIE['userID'])){
+                echo "<script src='../scripts/userFunctions.js'></script>";
             }
         ?>
-        <script src="../scripts/routing.js"></script>
-        <script src="../scripts/emoji.js"></script>
     </head>
     <body>
 
