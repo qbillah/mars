@@ -16,17 +16,9 @@ $(document).ready(function(){
         var eventDescription = $("#description").val();
         var eventDate = document.getElementById("date").value;
 
-        $.ajax({
-            type: "POST",
-            url: 'https://mars-remind.herokuapp.com/verify/addEvent',
-            data: {
-                title : eventTitle
-            },
-            success: function(response)
-            {
-                var jsonData = JSON.parse(response);
-                console.log(jsonData);
-            }
+        $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle })
+            .done(function( data ) {
+                alert( "Data Loaded: " + data );
         });
     });
 });
