@@ -120,14 +120,19 @@
                             switch($event['eventTag']){
                                 case "IMP":
                                     $tag = "📌";
+                                    break;
                                 case "EML":
                                     $tag = "📨";
+                                    break;
                                 case "WRK":
                                     $tag = "👔";
+                                    break;
                                 case "LZY":
                                     $tag = "🌴";
+                                    break;
                                 default:
                                     $tag = "📅";
+                                    break;
                             }
 
                             echo"<div class='todo-item-wrap' style='opacity: 1;'>";
