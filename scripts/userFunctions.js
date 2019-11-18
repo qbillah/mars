@@ -4,6 +4,7 @@ $(document).ready(function(){
         window.location.href = "https://mars-remind.herokuapp.com/verify/logout";
     });
 
+/* DEVELOPER MODE
     $("#add").click(function(){
         
         $("#date").datepicker();
@@ -47,11 +48,6 @@ $(document).ready(function(){
                         break;
                 }
 
-                console.log(getCookieEmail());
-                console.log(getCookieUser());
-                console.log(icon);
-                console.log(eventDate);
-
                 var formatDate = moment(eventDate).format('dddd, MMMM Do YYYY');
 
                 var sendTo = getCookieEmail();
@@ -69,18 +65,26 @@ $(document).ready(function(){
                 var template_id = "marsremind";
                 emailjs.send(service_id, template_id, template_params)
                 .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
+                    $("#title").val("");
+                    $("#description").val("");
+                    document.getElementById("date").value = "";
+                    window.location.href = "https://mars-remind.herokuapp.com/";
                 }, function(error) {
-                    console.log('FAILED...', error);
+                    $("#title").val("");
+                    $("#description").val("");
+                    document.getElementById("date").value = "";
+                    window.location.href = "https://mars-remind.herokuapp.com/?error=100";
                 });
 
-                $("#title").val("");
-                $("#description").val("");
-                document.getElementById("date").value = "";
-                //window.location.href = "https://mars-remind.herokuapp.com/";
-        });
+                
+            });
     });
+*/
 
+    $('.done').click(function(){
+        console.log($(this).attr('id'));
+    });
+    
     function getCookieEmail(name) {
         name = "email";
         var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
