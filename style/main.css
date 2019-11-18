@@ -185,6 +185,15 @@ input[type="text"]{
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 2px;
 }
+input[type="password"]{
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    font-size: 1.25em;
+    font-family: 'Inconsolata', monospace;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
 input[type="submit"]{
     -webkit-appearance: none;
     appearance: none;
