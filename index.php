@@ -116,6 +116,20 @@
 
                     if($events > 0){
                         while($event = $results->fetch_assoc()){
+
+                            switch($event['eventTag']){
+                                case "IMP":
+                                    $tag = "📌";
+                                case "EML":
+                                    $tag = "📨";
+                                case "WRK":
+                                    $tag = "👔";
+                                case "LZY":
+                                    $tag = "🌴";
+                                default:
+                                    $tag = "📅";
+                            }
+
                             echo"<div class='todo-item-wrap' style='opacity: 1;'>";
                             echo"<div class='todo-item-added'>";
 
@@ -131,7 +145,8 @@
                             echo"</div>";
 
                             echo"</div>";
-                            echo"<div class='edit'>🚀</div>";
+                            
+                            echo"<div class='edit'>".$tag."</div>";
                             echo"</div>";
                         }
                     }
