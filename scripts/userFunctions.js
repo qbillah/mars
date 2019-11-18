@@ -14,8 +14,9 @@ $(document).ready(function(){
         if(data.length == 2){
             var eventTitle = data[0];
             var eventTag = data[1];
-        }else if(data.length == 1){
-            var eventTitle = data;
+        }else{
+            var eventTitle = $("#title").val();
+            var eventTag = ''
         }
 
         console.log(eventTitle);
