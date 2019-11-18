@@ -49,6 +49,8 @@ $(document).ready(function(){
 
                 console.log(getCookieEmail());
                 console.log(getCookieUser());
+                console.log(icon);
+                console.log(date);
 
                 var template_params = {
                     "to_email": getCookieEmail(),
@@ -76,7 +78,7 @@ $(document).ready(function(){
     }
 
     function getCookieUser(name) {
-        name = "username";
+        name = "userID";
         var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
         return v ? v[2] : null;
     }
