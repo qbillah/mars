@@ -47,6 +47,9 @@ $(document).ready(function(){
                         break;
                 }
 
+                console.log(getCookieEmail());
+                console.log(getCookieUser());
+
                 var template_params = {
                     "to_email": getCookieEmail(),
                     "event_name": eventTitle,
