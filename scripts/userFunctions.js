@@ -15,15 +15,10 @@ $(document).ready(function(){
         if(read.includes("::") == true){
             var eventTitle = data[0];
             var eventTag = data[1];
-            console.log(true);
         }else if(read.includes("::") == false){
             var eventTitle = read;
             var eventTag = '';
-            console.log(false);
         }
-
-        console.log(eventTitle);
-        console.log(eventTag);
 
         var eventDescription = $("#description").val();
         var eventDate = document.getElementById("date").value;
@@ -33,7 +28,7 @@ $(document).ready(function(){
                 $("#title").val("");
                 $("#description").val("");
                 document.getElementById("date").value = "";
-                alert(data);
+                window.location.href = "https://mars-remind.herokuapp.com/";
         });
     });
 
