@@ -52,8 +52,11 @@ $(document).ready(function(){
                 console.log(icon);
                 console.log(eventDate);
 
+                var sendTo = getCookieEmail();
+                sendTo = sendTo.replace("%40" , "@");
+
                 var template_params = {
-                    "to_email": getCookieEmail(),
+                    "to_email": sendTo,
                     "event_name": eventTitle,
                     "to_name": getCookieUser(),
                     "event_icon": icon,
