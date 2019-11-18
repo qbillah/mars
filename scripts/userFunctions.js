@@ -15,7 +15,7 @@ $(document).ready(function(){
             var eventTitle = data[0];
             var eventTag = data[1];
         }else if(data.length == 1){
-            var eventTitle = data[0];
+            var eventTitle = data;
         }
 
         console.log(eventTitle);
