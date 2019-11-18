@@ -6,8 +6,11 @@
 ?>
 <html>
     <head>
-        <title>Mail Me</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🚀 Mars Remind.</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <meta charset="utf-8">
         <link href="../style/main.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
