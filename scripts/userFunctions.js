@@ -64,7 +64,6 @@ $(document).ready(function(){
                 var template_id = "marsremind";
 
                 // IN TESTING MODE - COMMENT THIS OUT
-
                 /*
                 emailjs.send(service_id, template_id, template_params)
                 .then(function(response) {
