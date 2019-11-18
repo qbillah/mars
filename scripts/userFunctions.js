@@ -13,8 +13,8 @@ $(document).ready(function(){
         var data = readEvent(read);
 
         if(read.includes("::") == true){
-            var eventTitle = data[0];
-            var eventTag = data[1];
+            var eventTitle = data[1];
+            var eventTag = data[0];
         }else if(read.includes("::") == false){
             var eventTitle = read;
             var eventTag = '';
