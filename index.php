@@ -3,16 +3,6 @@
 
     session_start();
 
-    if(isset($_SESSION['userID'])){
-        echo "1";
-        if(isset($_COOKIE['userID'])){
-            echo "2";
-        }else{
-            
-        }
-    }else{
-
-    }
 ?>
 <html>
     <head>
@@ -48,7 +38,27 @@
             <div class="header">
                 <div class="rounded-wrap" style="position: absolute; left: 4.5em;">About</div>
                 <div class="rounded-wrap">🚀 M.A.R.S 🚀</div>
-                <div class="rounded-wrap" style="position: absolute; right: 4.5em;" id="login">Login</div>
+                <div class="rounded-wrap" style="position: absolute; right: 4.5em;" id="
+                    <?php 
+                        if(isset($_SESSION['userID'])){
+                            
+                        }else if(isset($_COOKIE['userID'])){
+                            
+                        }else{
+                            echo "#login";
+                        }
+                    ?>
+                ">
+                    <?php 
+                        if(isset($_SESSION['userID'])){
+                            echo $_SESSION['userID'];
+                        }else if(isset($_COOKIE['userID'])){
+                            echo $_COOKIE['userID'];
+                        }else{
+                            echo "#login";
+                        }
+                    ?>
+                </div>
             </div>
             <div class="app-container" id="app">
 
