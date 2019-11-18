@@ -13,7 +13,7 @@
 ?>
 <html>
     <head>
-        <title>🚀 Mars Remind - Sort</title>
+        <title>🚀 Mars Remind - Results</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <meta charset="utf-8">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -95,6 +95,8 @@
                 <?php 
 
                     $findTag = $_GET["tag"];
+
+                    echo $findTag;
 
                     if(isset($_SESSION['uuID'])){
                         $user = $_SESSION['uuID'];
