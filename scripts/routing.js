@@ -16,7 +16,7 @@ $(document).ready(function(){
         var eventDescription = $("#description").val();
         var eventDate = document.getElementById("date").value;
 
-        $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle })
+        $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , date: eventDate})
             .done(function( data ) {
                 alert( "Data Loaded: " + data );
         });
