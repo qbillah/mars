@@ -25,11 +25,26 @@ $(document).ready(function(){
 
         $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , tag: eventTag , date: eventDate })
             .done(function( data ) {
+
+                Email.send({
+                    SecureToken : "5f2e68c9-3035-4a48-a31b-ef8eeb82fd24",
+                    To : 'them@website.com',
+                    From : "marsreminder@gmail.com",
+                    Subject : "This is the subject",
+                    Body : "And this is the body"
+                }).then(
+                  message => alert(message)
+                );
+
                 $("#title").val("");
                 $("#description").val("");
                 document.getElementById("date").value = "";
                 window.location.href = "https://mars-remind.herokuapp.com/";
         });
     });
+
+    function sendMail(){
+
+    }
 
 });
