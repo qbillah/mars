@@ -52,7 +52,7 @@ $(document).ready(function(){
                 console.log(icon);
                 console.log(eventDate);
 
-                var formatDate = moment(testDate).format('dddd, MMMM Do YYYY');
+                var formatDate = moment(eventDate).format('dddd, MMMM Do YYYY');
 
                 var sendTo = getCookieEmail();
                 sendTo = sendTo.replace("%40" , "@");
