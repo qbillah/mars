@@ -3,8 +3,7 @@ $(document).ready(function(){
     $("#logout").click(function(){
         window.location.href = "https://mars-remind.herokuapp.com/verify/logout";
     });
-
-/* DEVELOPER MODE
+    
     $("#add").click(function(){
         
         $("#date").datepicker();
@@ -63,26 +62,35 @@ $(document).ready(function(){
                 
                 var service_id = "default_service";
                 var template_id = "marsremind";
+
+                // IN TESTING MODE - COMMENT THIS OUT
+
+                /*
                 emailjs.send(service_id, template_id, template_params)
                 .then(function(response) {
                     $("#title").val("");
                     $("#description").val("");
                     document.getElementById("date").value = "";
-                    window.location.href = "https://mars-remind.herokuapp.com/";
+                    
                 }, function(error) {
                     $("#title").val("");
                     $("#description").val("");
                     document.getElementById("date").value = "";
                     window.location.href = "https://mars-remind.herokuapp.com/?error=100";
-                });
+                });*/
 
+                window.location.href = "https://mars-remind.herokuapp.com/";
                 
             });
     });
-*/
+
 
     $('.done').click(function(){
-        console.log($(this).attr('id'));
+        var deleteKey = $(this).attr('id');
+        $.post("https://mars-remind.herokuapp.com/verify/deleteEvent" , {deleteID : deleteKey}).done(function(data){
+            alert(data);
+            window.location.href = "https://mars-remind.herokuapp.com/";
+        });
     });
     
     function getCookieEmail(name) {
