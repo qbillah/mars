@@ -49,7 +49,7 @@
         <div class="main">
             <div class="header">
 
-                <div class="rounded-wrap username-display" style="position: absolute; left: 4.5em;" id="<?php if(isset($_SESSION['userID'])){echo "";}else if(isset($_COOKIE['userID'])){echo "";}else{echo "#about";}?>">
+                <div class="rounded-wrap username-display-landing" style="position: absolute; left: 4.5em;" id="<?php if(isset($_SESSION['userID'])){echo "";}else if(isset($_COOKIE['userID'])){echo "";}else{echo "#about";}?>">
                     <?php 
                         if(isset($_SESSION['userID'])){
                             echo $_SESSION['userID'];
