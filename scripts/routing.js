@@ -19,6 +19,9 @@ $(document).ready(function(){
         var eventDate = document.getElementById("date").value;
         $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , date: eventDate})
             .done(function( data ) {
+                $("#title").val("");
+                $("#description").val("");
+                document.getElementById("date").value = "";
                 alert(data);
         });
     });
