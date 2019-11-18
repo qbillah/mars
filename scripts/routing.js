@@ -10,4 +10,25 @@ $(document).ready(function(){
     $("#logout").click(function(){
         window.location.href = "https://mars-remind.herokuapp.com/verify/logout";
     });
+    $("#add").click(function(){
+        $("#date").datepicker();
+        var eventTitle = $("#title").val();
+        var eventDescription = $("#description").val();
+        var eventDate = document.getElementById("date").value;
+
+        $.ajax({
+            type: "POST",
+            url: 'https://mars-remind.herokuapp.com/verify/addEvent',
+            data: {
+                title : eventTitle,
+                description : eventDescription,
+                date : eventDate
+            },
+            success: function(response)
+            {
+                var jsonData = JSON.parse(response);
+                console.log(jsonData);
+            }
+        });
+    });
 });
