@@ -113,7 +113,7 @@
                     $events = $results->num_rows;
 
                     if($events > 0){
-                        while($event = $events->fetch_assoc()){
+                        while($event = $results->fetch_assoc()){
                             echo"<div class='todo-item-wrap' style='opacity: 1;'>";
                             echo"<div class='todo-item-added'>";
 
