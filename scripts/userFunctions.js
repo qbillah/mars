@@ -25,6 +25,20 @@ $(document).ready(function(){
 
         $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , tag: eventTag , date: eventDate })
             .done(function( data ) {
+
+                Email.send({
+                    //SecureToken : "5f2e68c9-3035-4a48-a31b-ef8eeb82fd24",
+                    Host : "smtp.yourisp.com",
+                    Username : "marsreminder@gmail.com",
+                    Password : "Quazi890123",
+                    To : 'yasinbillahdesigns@gmail.com',
+                    From : "marsreminder@gmail.com",
+                    Subject : "This is the subject",
+                    Body : "And this is the body"
+                }).then(
+                  message => alert(message)
+                );
+
                 $("#title").val("");
                 $("#description").val("");
                 document.getElementById("date").value = "";
