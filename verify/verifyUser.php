@@ -53,8 +53,10 @@
                             
                             setcookie('userID' , $cleanUser , time()+86400 , '/');
                             setcookie('uuID' , $uuID , time()+86400 , '/');
+                            setcookie('email' , $user_email , time()+86400 , '/');
                             $_SESSION["userID"] = $cleanUser;
                             $_SESSION["uuID"] = $uuID;
+                            $_SESSION["email"] = $user_email;
                             header("Location: $dashboard");
                         }else{
                             header("Location: $redURL");
@@ -78,8 +80,10 @@
 
                             setcookie('userID' , $cleanUser , time()+86400 , '/');
                             setcookie('uuID' , $uuID[0] , time()+86400 , '/');
+                            setcookie('email' , $user_email , time()+86400 , '/');
                             $_SESSION["userID"] = $cleanUser;
                             $_SESSION["uuID"] = $uuID[0];
+                            $_SESSION["email"] = $user_email;
                             header("Location: $dashboard");
                         }else{
                             header("Location: $redURL");
