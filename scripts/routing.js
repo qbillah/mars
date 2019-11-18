@@ -20,9 +20,7 @@ $(document).ready(function(){
             type: "POST",
             url: 'https://mars-remind.herokuapp.com/verify/addEvent',
             data: {
-                title : eventTitle,
-                description : eventDescription,
-                date : eventDate
+                title : eventTitle
             },
             success: function(response)
             {
