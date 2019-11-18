@@ -20,7 +20,7 @@ $(document).ready(function(){
         $(title).attr("type" , "text");
         $(title).val(a);
         
-        readEvent(a);
+        console.log(readEvent(a));
 
         /**CHANGE THIS WITH THE EMOJI ALGORITHM */
         /**CHANGE ELEMENT TO A SPAN - NO CHECKBOXES */

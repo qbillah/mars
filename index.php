@@ -28,7 +28,7 @@
         <script src="../scripts/emoji.js"></script>
     </head>
     <body>
-
+        
         <div class="login-modal">
             <div class="login-wrap">
                 <div class="rounded-wrap">🚀 LOGIN TO M.A.R.S 🚀</div>
@@ -49,7 +49,7 @@
         <div class="main">
             <div class="header">
 
-                <div class="rounded-wrap" style="position: absolute; left: 4.5em;" id="<?php if(isset($_SESSION['userID'])){echo "";}else if(isset($_COOKIE['userID'])){echo "";}else{echo "#about";}?>">
+                <div class="rounded-wrap" style="position: absolute; left: 4.5em; max-width: 6ch;" id="<?php if(isset($_SESSION['userID'])){echo "";}else if(isset($_COOKIE['userID'])){echo "";}else{echo "#about";}?>">
                     <?php 
                         if(isset($_SESSION['userID'])){
                             echo $_SESSION['userID'];
@@ -60,9 +60,8 @@
                         }
                     ?>
                 </div>
-
                 <div class="rounded-wrap">🚀 M.A.R.S 🚀</div>
-                <div class="rounded-wrap" style="position: absolute; right: 4.5em;" id="<?php if(isset($_SESSION['userID'])){echo "logout";}else if(isset($_COOKIE['userID'])){echo "logout";}else{echo "login";}?>">
+                <div class="rounded-wrap" style="position: absolute; right: 4.5em; " id="<?php if(isset($_SESSION['userID'])){echo "logout";}else if(isset($_COOKIE['userID'])){echo "logout";}else{echo "login";}?>">
                     <?php 
                         if(isset($_SESSION['userID'])){
                             echo "Logout";
@@ -73,6 +72,7 @@
                         }
                     ?>
                 </div>
+
             </div>
             <div class="app-container" id="app">
 
@@ -81,8 +81,8 @@
                     <a id="important">📌</a>
                     <a id="phone">📞</a>
                     <a id="professional">👔</a>
-                    <a id="holiday">🎈</a>
-                    <a id="vacation">🌴</a>
+                    <a id="leisure">🌴</a>
+                    <a id="misc">📎</a>
                 </div>
 
                 <div class="todo-item-wrap-nodrag" style="opacity: 1;">

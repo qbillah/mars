@@ -5,10 +5,19 @@ $(document).ready(function(){
     });
 
     $("#add").click(function(){
+        
         $("#date").datepicker();
+
+
+
         var eventTitle = $("#title").val();
         var eventDescription = $("#description").val();
         var eventDate = document.getElementById("date").value;
+
+        
+        
+        console.log(readEvent(eventTitle));
+
         $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , date: eventDate})
             .done(function( data ) {
                 $("#title").val("");
@@ -17,5 +26,5 @@ $(document).ready(function(){
                 alert(data);
         });
     });
-    
+
 });
