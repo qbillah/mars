@@ -35,7 +35,7 @@
                 <br style="clear:both">
                 <form class="landing-login" action="../verify/verifyUser.php" method="post">
                     <input type="text" placeholder="Email" name="email">
-                    <input type="text" placeholder="Password" name="pass">
+                    <input type="password" placeholder="Password" name="pass">
                     <br style="clear:both">
                     <br style="clear:both">
                     <input type="submit" value="Login / Sign Up" name="submit">
@@ -92,7 +92,7 @@
                         </div>
                         <div class="content">
                             <input class="rem-content" type="text" placeholder="Add new event" name="event-title" id="title">
-                            <input class="rem-content" type="password" placeholder="Event description" name="event-description" id="description">
+                            <input class="rem-content" type="text" placeholder="Event description" name="event-description" id="description">
                             <br>
                             <input class="rem-content" type="date" name="event-date" id="date">
                         </div>
