@@ -27,7 +27,7 @@ $(document).ready(function(){
         var checked = document.createElement("input");
         $(checked).attr("type" , "checkbox");
         checked.className = "done";
-         /**CHANGE THIS WITH THE EMOJI ALGORITHM */
+        /**CHANGE THIS WITH THE EMOJI ALGORITHM */
 
         var br = document.createElement("br");
 
@@ -79,6 +79,14 @@ $(document).ready(function(){
         $('#title').val('');
         $('#description').val('');
         $('#date').val('');
+    });
+
+    $("#login-dismiss").click(function(){
+        $(".login-modal").slideUp();
+    });
+
+    $("#login").click(function(){
+        $(".login-modal").slideDown().css('display' , 'inline-flex');
     });
 
     $('#delete').droppable({
