@@ -2,10 +2,12 @@ function readEvent(title){
     
     var data;
 
+    var arrData = [];
+
     if(title.includes("::") == true){
         var flag = title.split("::");
-        data.push(flag[0]);
-        data.push(flag[1]);
+        arrData.push(flag[0]);
+        arrData.push(flag[1]);
         return data;
     }else if(title.includes("::") == false){
         data = title;
