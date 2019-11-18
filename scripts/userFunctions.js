@@ -8,13 +8,14 @@ $(document).ready(function(){
         
         $("#date").datepicker();
 
+        var read = ("#title").val();
+        
+        var data = readEvent(read);
 
-        var data = readEvent($("#title").val());
-
-        if(data.length == 2){
+        if(read.includes("::") == true){
             var eventTitle = data[0];
             var eventTag = data[1];
-        }else{
+        }else if(read.includes("::") == false){
             var eventTitle = $("#title").val();
             var eventTag = '';
         }
