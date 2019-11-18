@@ -52,6 +52,8 @@ $(document).ready(function(){
                 console.log(icon);
                 console.log(eventDate);
 
+                var formatDate = moment(testDate).format('dddd, MMMM Do YYYY');
+
                 var sendTo = getCookieEmail();
                 sendTo = sendTo.replace("%40" , "@");
 
@@ -60,7 +62,7 @@ $(document).ready(function(){
                     "event_name": eventTitle,
                     "to_name": getCookieUser(),
                     "event_icon": icon,
-                    "event_date": eventDate
+                    "event_date": formatDate
                 }
                 
                 var service_id = "default_service";
