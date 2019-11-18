@@ -44,7 +44,7 @@
                         }else if(isset($_COOKIE['userID'])){
                             echo "";
                         }else{
-                            echo "#about";
+                            echo "about";
                         }
                     ?>
                 ">
@@ -63,11 +63,11 @@
                 <div class="rounded-wrap" style="position: absolute; right: 4.5em;" id="
                     <?php 
                         if(isset($_SESSION['userID'])){
-                            echo "#logout";
+                            echo "logout";
                         }else if(isset($_COOKIE['userID'])){
-                            echo "#logout";
+                            echo "logout";
                         }else{
-                            echo "#login";
+                            echo "login";
                         }
                     ?>
                 ">
