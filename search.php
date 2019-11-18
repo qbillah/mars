@@ -3,11 +3,13 @@
 
     session_start();
     require('./verify/dbConn.php');
-
+    if(!isset($_SESSION['userID']) || !isset($_COOKIE['userID'])){
+        header("Location: https://mars-remind.herokuapp.com/");
+    }
 ?>
 <html>
     <head>
-        <title>🚀 Mars Remind.</title>
+        <title>🚀 Mars Remind - Sort</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <meta charset="utf-8">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -86,22 +88,9 @@
                     <a id="misc">📎</a>
                 </div>
 
-                <div class="todo-item-wrap-nodrag" style="opacity: 1;">
-                    <div class="todo-item-added">
-                        <div class="actions">
-                            <input type="checkbox" class="done">
-                        </div>
-                        <div class="content">
-                            <input class="rem-content" type="text" placeholder="Add new event" name="event-title" id="title">
-                            <input class="rem-content" type="text" placeholder="Event description" name="event-description" id="description">
-                            <br>
-                            <input class="rem-content" type="date" name="event-date" id="date">
-                        </div>
-                    </div>
-                    <div class="edit" id="add">🚀</div>
-                </div>
-
                 <?php 
+
+                    $findTag = $_GET["tag"];
 
                     if(isset($_SESSION['uuID'])){
                         $user = $_SESSION['uuID'];
@@ -111,7 +100,7 @@
                         
                     }
                     
-                    $sql = "SELECT * FROM $user ORDER BY eventDate DESC";
+                    $sql = "SELECT * FROM $user ORDER BY eventDate DESC WHERE eventTag = $findTag";
                     $results = $conn->query($sql);
                     $events = $results->num_rows;
 
