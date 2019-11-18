@@ -221,4 +221,8 @@ div.dismiss{
          justify-content: center;
          margin-left: -.5em;
     }
+    div.username-display{
+        max-width: 6ch;
+        overflow-x: hidden;
+    }
 }

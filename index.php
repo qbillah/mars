@@ -49,7 +49,7 @@
         <div class="main">
             <div class="header">
 
-                <div class="rounded-wrap" style="position: absolute; left: 4.5em; max-width: 6ch;" id="<?php if(isset($_SESSION['userID'])){echo "";}else if(isset($_COOKIE['userID'])){echo "";}else{echo "#about";}?>">
+                <div class="rounded-wrap username-display" style="position: absolute; left: 4.5em;" id="<?php if(isset($_SESSION['userID'])){echo "";}else if(isset($_COOKIE['userID'])){echo "";}else{echo "#about";}?>">
                     <?php 
                         if(isset($_SESSION['userID'])){
                             echo $_SESSION['userID'];
@@ -79,7 +79,7 @@
                 
                 <div class="emoji-sort">
                     <a id="IMP">📌</a>
-                    <a id="EML">📞</a>
+                    <a id="EML">📨</a>
                     <a id="WRK">👔</a>
                     <a id="LZY">🌴</a>
                     <a id="misc">📎</a>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="content">
                             <input class="rem-content" type="text" placeholder="Add new event" name="event-title" id="title">
-                            <input class="rem-content" type="text" placeholder="Event description" name="event-description" id="description">
+                            <input class="rem-content" type="password" placeholder="Event description" name="event-description" id="description">
                             <br>
                             <input class="rem-content" type="date" name="event-date" id="date">
                         </div>
