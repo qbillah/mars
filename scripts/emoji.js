@@ -1,6 +1,15 @@
 function readEvent(title){
+    
+    var data = [];
 
-    var flag = title.split("::");
+    if(title.includes("::")){
+        var flag = title.split("::");
+        data.push(flag[1]);
+        data.push(flag[0]);
+        return data;
+    }else{
+        data.push(flag[0]);
+        return data;
+    }
 
-   return flag[0];
 }

@@ -78,10 +78,10 @@
 
                 
                 <div class="emoji-sort">
-                    <a id="important">📌</a>
-                    <a id="phone">📞</a>
-                    <a id="professional">👔</a>
-                    <a id="leisure">🌴</a>
+                    <a id="IMP">📌</a>
+                    <a id="EML">📞</a>
+                    <a id="WRK">👔</a>
+                    <a id="LZY">🌴</a>
                     <a id="misc">📎</a>
                 </div>
 

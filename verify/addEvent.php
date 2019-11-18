@@ -8,6 +8,11 @@
         if(isset($_POST["title"]) && isset($_POST["date"])){
 
             //SANITIZATION
+
+            $tag = $_POST["tag"];
+            $tag = htmlspecialchars($tag);
+            $tag = filter_var($tag , FILTER_SANITIZE_STRING);
+
             $title = $_POST["title"];
             $title = htmlspecialchars($title);
             $title = filter_var($title , FILTER_SANITIZE_STRING);
@@ -33,7 +38,7 @@
                 header("Location: $redurl");
             }
 
-            $sql = "INSERT INTO $table (`event` , `eventDescription` , `eventDate`) VALUES ('$title' , '$desc' , '$date')";
+            $sql = "INSERT INTO $table (`event` , `eventDescription` , `eventTag` , `eventDate`) VALUES ('$title' , '$desc' , '$tag' , '$date')";
             if($conn->query($sql)){
 
                 echo "Added 1 Event :)";

@@ -9,16 +9,22 @@ $(document).ready(function(){
         $("#date").datepicker();
 
 
+        var data = readEvent($("#title").val());
 
-        var eventTitle = $("#title").val();
+        if(data.length == 2){
+            var eventTitle = data[0];
+            var eventTag = data[1];
+        }else if(data.length == 1){
+            var eventTitle = data[0];
+        }
+
+        console.log(eventTitle);
+        console.log(eventTag);
+
         var eventDescription = $("#description").val();
         var eventDate = document.getElementById("date").value;
 
-        
-        
-        console.log(readEvent(eventTitle));
-
-        $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , date: eventDate})
+        $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , tag: eventTag , date: eventDate })
             .done(function( data ) {
                 $("#title").val("");
                 $("#description").val("");

@@ -45,6 +45,7 @@
                                     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                                     event VARCHAR(255),
                                     eventDescription VARCHAR(255),
+                                    eventTag VARCHAR(255),
                                     eventDate DATE
                                 );
                             ";
