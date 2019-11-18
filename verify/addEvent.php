@@ -2,6 +2,8 @@
 
     session_start();
 
+    require './vendor/autoload.php';
+
     $redurl = "https://mars-remind.herokuapp.com/?error=100";
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -59,15 +61,26 @@
                     header("Location: $redurl");
                 }
 
-                $subject = "🚀 Mars Remind - ".$title;
+                $mail = new PHPMailer();
 
-                $message = "
-                test
-                ";
-                
-                $headers = "From: ".$sendTo;
-
-                mail($to,$subject,$message,$headers);
+                try{
+                    $mail->IsSMTP();
+                    $mail->IsSMTP(); // enable SMTP
+                    $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+                    $mail->SMTPAuth = true; // authentication enabled
+                    $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+                    $mail->Host = "smtp.gmail.com";
+                    $mail->Port = 465; // or 587
+                    $mail->IsHTML(true);
+                    $mail->Username = "marsreminder@gmail.com";
+                    $mail->Password = "Quazi890123";
+                    $mail->SetFrom("marsreminder@gmail.com" , "Mars Reminder");
+                    $mail->Subject = "Test";
+                    $mail->Body = "hello";
+                    $mail->AddAddress($sendTo);
+                }catch(Exception $e){
+                    echo 'Mailer Error: '. $mail->ErrorInfo;
+                }
                 
             }else{
                 echo "Event add error :(";
