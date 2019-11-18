@@ -26,15 +26,38 @@ $(document).ready(function(){
         $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , tag: eventTag , date: eventDate })
             .done(function( data ) {
 
-                Email.send({
-                    SecureToken : "377666a6-fbb4-4db3-bef2-c447d13b0333",
-                    To : 'yasinbillahdesigns@gmail.com',
-                    From : "marsreminder@gmail.com",
-                    Subject : "This is the subject",
-                    Body : "And this is the body"
-                }).then(
-                  message => alert(message)
-                );
+                emailjs.init("user_QcO3RSFmIVpstkRwN2BBm");
+
+                var icon;
+                switch(eventTag){
+                    case "IMP":
+                        icon = "📌";
+                        break;
+                    case "EML":
+                        icon = "📨";
+                        break;
+                    case "WRK":
+                        icon = "👔";
+                        break;
+                    case "LZY":
+                        icon = "🌴";
+                        break;
+                    default:
+                        icon = "📅";
+                        break;
+                }
+
+                var template_params = {
+                    "to_email": getCookieEmail(),
+                    "event_name": eventTitle,
+                    "to_name": getCookieUser(),
+                    "event_icon": icon,
+                    "event_date": eventDate
+                }
+                
+                var service_id = "default_service";
+                var template_id = "marsremind";
+                emailjs.send(service_id, template_id, template_params);
 
                 $("#title").val("");
                 $("#description").val("");
@@ -43,8 +66,16 @@ $(document).ready(function(){
         });
     });
 
-    function sendMail(){
+    function getCookieEmail(name) {
+        name = "email";
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
+    }
 
+    function getCookieUser(name) {
+        name = "username";
+        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+        return v ? v[2] : null;
     }
 
 });
