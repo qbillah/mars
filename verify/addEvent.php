@@ -62,21 +62,10 @@
                 $subject = "🚀 Mars Remind - ".$title;
 
                 $message = "
-                <html>
-                    <head>
-                        <title>🚀 Mars Remind for - ".$title."</title>
-                    </head>
-                    <body>
-                        <p>Hey, ".$user."! This is a reminder for your event - ".$title." (".$desc.")</p>
-                        <br>
-                        <p>This event is on - ".$date."</p>
-                    </body>
-                </html>
+                test
                 ";
-
-                $headers = "MIME-Version: 1.0" . "\r\n";
-                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                $headers .= "From: ".$sendTo;
+                
+                $headers = "From: ".$sendTo;
 
                 mail($to,$subject,$message,$headers);
                 
