@@ -5,18 +5,20 @@
         if(!isset($_COOKIE['userID'])){
             header("Location: https://mars-remind.herokuapp.com/");
         }else{
-            $uuID = $_COOKIE['userID'];
+            $delAcc = $_COOKIE['userID'];
         }
     }else{
-        $uuID = $_SESSION['userID'];
+        $delAcc = $_SESSION['userID'];
     }
+
+    echo $delAcc;
 
     require('dbConn.php');
 
-    $sql = "DELETE FROM marsUsers WHERE uniqueUID = '$uuID'";
+    $sql = "DELETE FROM marsUsers WHERE uniqueUID = '$delAcc'";
 
     if($conn->query($sql)){
-        $sql = "DROP TABLE $uuID";
+        $sql = "DROP TABLE $delAcc";
         if($conn->query($sql)){
             header("Location: https://mars-remind.herokuapp.com/logout");
         }
