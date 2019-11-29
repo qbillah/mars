@@ -19,6 +19,10 @@ $(document).ready(function(){
     $("#delete-account").click(function(){
         window.location.href = "https://mars-remind.herokuapp.com/verify/deleteAccount";
     });
+
+    $("#change-pass").click(function(){
+        window.location.href = "https://mars-remind.herokuapp.com/changePass";
+    });
     
     $("#add").click(function(){
         
