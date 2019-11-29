@@ -84,7 +84,7 @@ $(document).ready(function(){
                 var template_id = "marsremind";
 
                 // IN TESTING MODE - COMMENT THIS OUT
-                /*
+                
                 emailjs.send(service_id, template_id, template_params)
                 .then(function(response) {
                     $("#title").val("");
@@ -96,7 +96,7 @@ $(document).ready(function(){
                     $("#description").val("");
                     document.getElementById("date").value = "";
                     window.location.href = "https://mars-remind.herokuapp.com/?error=100";
-                });*/
+                });
 
                 window.location.href = "https://mars-remind.herokuapp.com/";
                 

@@ -1,9 +1,6 @@
 <?php 
     session_start();
 
-    $redURL = "https://mars-remind.herokuapp.com/";
-    $dashboard = "https://mars-remind.herokuapp.com/";
-
     require('dbConn.php');
 
     if(!isset($_SESSION['uuID'])){
@@ -27,6 +24,8 @@
             }else{
                 header("Location: https://mars-remind.herokuapp.com/");
             }
+        }else{
+            header("Location: https://mars-remind.herokuapp.com/?changedPassword=no");
         }
     }
 
