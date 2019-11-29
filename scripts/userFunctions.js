@@ -8,7 +8,13 @@ $(document).ready(function(){
         window.location.href = "https://mars-remind.herokuapp.com/verify/logout";
     });
 
-    
+    $("#delete-data").click(function(){
+        window.location.href = "https://mars-remind.herokuapp.com/verify/deleteData";
+    });
+
+    $("#delete-account").click(function(){
+        window.location.href = "https://mars-remind.herokuapp.com/verify/deleteAccount";
+    });
     
     $("#add").click(function(){
         
@@ -89,7 +95,6 @@ $(document).ready(function(){
             });
     });
 
-
     $('.done').click(function(){
         var deleteKey = $(this).attr('id');
         $.post("https://mars-remind.herokuapp.com/verify/deleteEvent" , {deleteID : deleteKey}).done(function(data){
@@ -128,5 +133,7 @@ $(document).ready(function(){
         var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
         return v ? v[2] : null;
     }
+
+
 
 });
