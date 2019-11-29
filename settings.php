@@ -83,7 +83,6 @@
             <div class="app-container" id="settings">
                 <div class="settings-wrap">
                     <button class="settings">Change password 🔒</button>
-                    <button class="settings">Change email 📧</button>
                     <button class="settings" id="delete-data">Delete my data 🗑️</button>
                     <button class="settings" id="delete-account">Delete my account ⛔</button>
                     <button class="settings" id="settings-logout">Logout 🛑</button>

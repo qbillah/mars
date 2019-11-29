@@ -9,6 +9,10 @@ $(document).ready(function(){
     });
 
     $("#delete-data").click(function(){
+        window.location.href = "https://mars-remind.herokuapp.com/data";
+    });
+
+    $("#delete-data-confirm").click(function(){
         window.location.href = "https://mars-remind.herokuapp.com/verify/deleteData";
     });
 

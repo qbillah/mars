@@ -10,7 +10,7 @@
     }else{
         $delAcc = $_SESSION['uuID'];
     }
-    
+
     require('dbConn.php');
 
     $sql = "DELETE FROM marsUsers WHERE uniqueUID = '$delAcc'";
@@ -18,7 +18,7 @@
     if($conn->query($sql)){
         $sql = "DROP TABLE $delAcc";
         if($conn->query($sql)){
-            header("Location: https://mars-remind.herokuapp.com/logout");
+            header("Location: https://mars-remind.herokuapp.com/verify/logout");
         }
     }else{
         header("Location: https://mars-remind.herokuapp.com/");
