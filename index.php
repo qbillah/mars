@@ -53,9 +53,9 @@
                 <div class="rounded-wrap username-display-landing" style="position: absolute; left: 4.5em;" id="<?php if(isset($_SESSION['userID'])){echo "";}else if(isset($_COOKIE['userID'])){echo "";}else{echo "#about";}?>">
                     <?php 
                         if(isset($_SESSION['userID'])){
-                            echo $_SESSION['userID'];
+                            echo "<a href='https://mars-remind.herokuapp.com/settings'>".$_SESSION['userID']."</a>";
                         }else if(isset($_COOKIE['userID'])){
-                            echo $_COOKIE['userID'];
+                            echo "<a href='/settings'>".$_COOKIE['userID']."</a>";
                         }else{
                             echo "About";
                         }

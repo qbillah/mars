@@ -3,6 +3,12 @@ $(document).ready(function(){
     $("#logout").click(function(){
         window.location.href = "https://mars-remind.herokuapp.com/verify/logout";
     });
+
+    $("#settings-logout").click(function(){
+        window.location.href = "https://mars-remind.herokuapp.com/verify/logout";
+    });
+
+    
     
     $("#add").click(function(){
         
