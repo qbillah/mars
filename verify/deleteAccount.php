@@ -1,18 +1,16 @@
 <?php 
     session_start();
 
-    if(!isset($_SESSION['userID'])){
-        if(!isset($_COOKIE['userID'])){
+    if(!isset($_SESSION['uuID'])){
+        if(!isset($_COOKIE['uuID'])){
             header("Location: https://mars-remind.herokuapp.com/");
         }else{
-            $delAcc = $_COOKIE['userID'];
+            $delAcc = $_COOKIE['uuID'];
         }
     }else{
-        $delAcc = $_SESSION['userID'];
+        $delAcc = $_SESSION['uuID'];
     }
-
-    echo $delAcc;
-
+    
     require('dbConn.php');
 
     $sql = "DELETE FROM marsUsers WHERE uniqueUID = '$delAcc'";
