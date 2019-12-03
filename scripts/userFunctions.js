@@ -84,28 +84,20 @@ $(document).ready(function(){
                 var template_id = "marsremind";
 
                 // IN TESTING MODE - COMMENT THIS OUT
-                /*
+                
                 emailjs.send(service_id, template_id, template_params)
                 .then(function(response) {
                     $("#title").val("");
                     $("#description").val("");
                     document.getElementById("date").value = "";
-                    
+                    console.log(response);
                 }, function(error) {
                     $("#title").val("");
                     $("#description").val("");
                     document.getElementById("date").value = "";
                     window.location.href = "https://mars-remind.herokuapp.com/?error=100";
-                });*/
-
-                emailjs.send("marsreminder", "marsremind", {
-                    "to_email": sendTo,
-                    "event_name": eventTitle,
-                    "to_name": getCookieUser(),
-                    "event_icon": icon,
-                    "event_date": formatDate
+                    console.log(error);
                 });
-
 
                 window.location.href = "https://mars-remind.herokuapp.com/";
                 
