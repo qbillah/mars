@@ -16,8 +16,6 @@
         <link href="../style/main.css" rel="stylesheet">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
         <?php 
             if(!isset($_SESSION['userID']) && !isset($_COOKIE['userID'])){
                 echo "<script src='../scripts/routing.js'></script>";
@@ -189,4 +187,5 @@
         </div>
 
     </body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 </html>
