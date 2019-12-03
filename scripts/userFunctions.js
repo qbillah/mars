@@ -80,7 +80,7 @@ $(document).ready(function(){
                     "event_date": formatDate
                 }
                 
-                var service_id = "default_service";
+                var service_id = "marsreminder";
                 var template_id = "marsremind";
 
                 // IN TESTING MODE - COMMENT THIS OUT
