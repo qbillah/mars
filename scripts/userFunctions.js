@@ -90,12 +90,14 @@ $(document).ready(function(){
                     $("#title").val("");
                     $("#description").val("");
                     document.getElementById("date").value = "";
+                    console.log("1");
                     console.log(response);
                 }, function(error) {
                     $("#title").val("");
                     $("#description").val("");
                     document.getElementById("date").value = "";
                     window.location.href = "https://mars-remind.herokuapp.com/?error=100";
+                    console.log("0");
                     console.log(error);
                 });
 
