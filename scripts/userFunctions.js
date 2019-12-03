@@ -46,7 +46,7 @@ $(document).ready(function(){
         $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , tag: eventTag , date: eventDate })
             .done(function( data ) {
 
-                emailjs.init("user_QcO3RSFmIVpstkRwN2BBm");
+                //emailjs.init("");
 
                 var icon;
                 switch(eventTag){
@@ -82,7 +82,25 @@ $(document).ready(function(){
                 
                 var service_id = "marsreminder";
                 var template_id = "marsremind";
-                
+
+                var data = {
+                    service_id: 'marsreminder',
+                    template_id: 'marsremind',
+                    user_id: 'user_QcO3RSFmIVpstkRwN2BBm',
+                    template_params: template_params
+                };
+
+                $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json'
+                }).done(function() {
+                    alert('Your mail is sent!');
+                }).fail(function(error) {
+                    alert('Oops... ' + JSON.stringify(error));
+                });
+               
+                /*
                 emailjs.send(service_id, template_id, template_params)
                 .then(function(response) {
                     $("#title").val("");
@@ -97,7 +115,7 @@ $(document).ready(function(){
                     window.location.href = "https://mars-remind.herokuapp.com/?error=100";
                     console.log("0");
                     console.log(error);
-                });
+                });*/
 
                 window.location.href = "https://mars-remind.herokuapp.com/";
                 
