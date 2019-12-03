@@ -25,4 +25,4 @@ Example: IMP::Semester finishes in 2 weeks!!!
 
 *To search for this event just click the '📌' icon.
 
-
+*Note: The third-party email.js API is not able to handle post requests at the moment. Therefore email capabilities may or may not work*
