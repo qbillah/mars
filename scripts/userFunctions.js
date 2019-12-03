@@ -46,8 +46,6 @@ $(document).ready(function(){
         $.post( "https://mars-remind.herokuapp.com/verify/addEvent", { title: eventTitle , description: eventDescription , tag: eventTag , date: eventDate })
             .done(function( data ) {
 
-                emailjs.init("user_QcO3RSFmIVpstkRwN2BBm");
-
                 var icon;
                 switch(eventTag){
                     case "IMP":
@@ -85,7 +83,7 @@ $(document).ready(function(){
 
                 // IN TESTING MODE - COMMENT THIS OUT
                 
-                emailjs.send(service_id, template_id, template_params)
+                emailjs.send(service_id, template_id, template_params , "user_QcO3RSFmIVpstkRwN2BBm")
                 .then(function(response) {
                     $("#title").val("");
                     $("#description").val("");
