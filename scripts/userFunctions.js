@@ -83,7 +83,7 @@ $(document).ready(function(){
 
                 // IN TESTING MODE - COMMENT THIS OUT
                 
-                emailjs.send(service_id, template_id, template_params , "user_QcO3RSFmIVpstkRwN2BBm")
+                emailjs.send(service_id, template_id, template_params)
                 .then(function(response) {
                     $("#title").val("");
                     $("#description").val("");
